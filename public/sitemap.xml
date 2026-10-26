@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home -->
+  <url>
+    <loc>https://www.toyotachemicals.co.in/</loc>
+    <lastmod>2025-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.toyotachemicals.co.in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.toyotachemicals.co.in/"/>
+    <image:image>
+      <image:loc>https://www.toyotachemicals.co.in/og-image.jpg</image:loc>
+      <image:title>Toyota Chemical Industries - Ion Exchange Resin Manufacturers in India</image:title>
+      <image:caption>Ion exchange resin manufacturer in India since 1972, GIDC Vapi, Gujarat</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Manufacturers in India landing page (exact-match keyword target) -->
+  <url>
+    <loc>https://www.toyotachemicals.co.in/manufacturers-in-india</loc>
+    <lastmod>2025-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.toyotachemicals.co.in/manufacturers-in-india"/>
+    <image:image>
+      <image:loc>https://www.toyotachemicals.co.in/og-image.jpg</image:loc>
+      <image:title>Ion Exchange Resin Manufacturers in India - Toyota Chemical Industries</image:title>
+    </image:image>
+  </url>
+
+  <!-- Products -->
+  <url>
+    <loc>https://www.toyotachemicals.co.in/products</loc>
+    <lastmod>2025-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.toyotachemicals.co.in/og-image.jpg</image:loc>
+      <image:title>Ion Exchange Resin Products - Toyota Chemical Industries</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/products/cationexchangeresins</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/products/anionexchangeresins</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/products/mixedbedexchangeresin</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/products/watersoftenerresins</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/products/specialtyresins</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://www.toyotachemicals.co.in/about</loc>
+    <lastmod>2025-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.toyotachemicals.co.in/og-image.jpg</image:loc>
+      <image:title>About Toyota Chemical Industries</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/service-area</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Applications -->
+  <url>
+    <loc>https://www.toyotachemicals.co.in/applications</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/applications/water-softener-resin</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/applications/boiler-feed-water-treatment</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/applications/dm-plant-resin</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/applications/mixed-bed-condensate-polishing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/applications/dealkalisation-resin</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/applications/etp-wastewater-treatment</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Industries -->
+  <url>
+    <loc>https://www.toyotachemicals.co.in/industries</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/industries/chemicalindustries</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/industries/food-beverage-industries</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/industries/paper-pulp-industries</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/industries/power-thermal-industries</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/industries/suger-refinery-industries</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/industries/textile-industries</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog index -->
+  <url>
+    <loc>https://www.toyotachemicals.co.in/blog</loc>
+    <lastmod>2025-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Blog posts (current React application) -->
+  <url>
+    <loc>https://www.toyotachemicals.co.in/blog/how-to-select-cation-resin-dm-plant</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/blog/dm-plant-resin-replacement-guide</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/blog/water-softener-not-removing-hardness</loc>
+    <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/blog/resin-specifications-explained</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog posts preserved from the previous site (served as static HTML) -->
+  <url>
+    <loc>https://www.toyotachemicals.co.in/blog/best-ion-exchange-resin-manufacturers-in-india</loc>
+    <lastmod>2025-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/blog/dm-plant-resin-suppliers-in-india</loc>
+    <lastmod>2025-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/blog/industrial-water-treatment-resins-guide</loc>
+    <lastmod>2025-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/blog/ion-exchange-resin-price-in-india</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/blog/how-to-choose-ion-exchange-resin-manufacturer</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/blog/what-is-ion-exchange-resin</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/blog/cation-vs-anion-exchange-resins</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/blog/water-softener-resin-guide</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- News (preserved from the previous site as static HTML) -->
+  <url>
+    <loc>https://www.toyotachemicals.co.in/news</loc>
+    <lastmod>2025-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Quality & certifications -->
+  <url>
+    <loc>https://www.toyotachemicals.co.in/quality-compliance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/partners</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/resources</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/sustainability</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://www.toyotachemicals.co.in/contact</loc>
+    <lastmod>2025-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Legal -->
+  <url>
+    <loc>https://www.toyotachemicals.co.in/legal-notice</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.toyotachemicals.co.in/privacy-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+/* =========================================================
+   GLOBAL INTERACTION LAYER
+
+   The only genuinely site-wide concerns live here. Component
+   styling stays inline in JSX with Tailwind utilities, per the
+   project convention.
+========================================================= */
+
+/* Tailwind 4's Preflight no longer sets cursor:pointer on
+   <button>, so every button in the app was rendering the
+   default arrow. This restores the affordance globally. */
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]),
+summary,
+label[for],
+select:not(:disabled),
+input[type="checkbox"]:not(:disabled),
+input[type="radio"]:not(:disabled) {
+  cursor: pointer;
+}
+
+button:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+/* Visible, on-brand keyboard focus indicator. */
+:where(a, button, [role="button"], summary, input, select, textarea):focus-visible {
+  outline: 2px solid #B27B34;
+  outline-offset: 2px;
+}
+
+/* Entrance for the mobile drawer and the search overlay. */
+@keyframes tci-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* The mobile drawer can be taller than the viewport once a submenu is
+   expanded. Body scroll is locked while it is open, so the drawer has to
+   scroll internally or its lower items become unreachable.
+   --tci-nav-offset is set inline to the measured height of the top bar.
+   The dvh line wins where supported; the vh line is the fallback. */
+.tci-mobile-menu {
+  max-height: calc(100vh - var(--tci-nav-offset, 76px));
+  max-height: calc(100dvh - var(--tci-nav-offset, 76px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* Global reduced-motion guard. This covers the marquees in About
+   and Contact and the animate-ping in Contact, which were the only
+   motion sources left unguarded by their own page-level blocks. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE SAFETY LAYER
+   Prevent page-level content from forcing horizontal overflow on
+   smaller screens without changing the existing visual design.
+========================================================= */
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+main,
+main > *,
+section,
+article {
+  min-width: 0;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+}
+
+.tci-mobile-menu {
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY NORMALIZATION
+   Keep the existing layout/colors, but remove decorative serif/cursive
+   styling across the project in favor of a clean normal UI font.
+========================================================= */
+:where(h1, h2, h3, h4, h5, h6),
+.font-serif,
+.font-garamond,
+.service-area-font-serif {
+  font-family: Inter, Arial, sans-serif !important;
+  font-style: normal !important;
+}
+
+/* Unified site typography: one clean normal font everywhere. */
+html, body, #root, #root * {
+  font-family: Inter, Arial, sans-serif !important;
+  font-style: normal !important;
+}
+

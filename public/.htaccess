@@ -1,0 +1,113 @@
+# SPA fallback and legacy-URL compatibility for the React Router application.
+#
+# Vite copies this file from public/ into dist/ on build. Upload it alongside
+# dist/index.html in the Apache document root.
+#
+# Two things must remain in the document root for this file to behave:
+#   * blog/*.html and news.html  - the preserved legacy pages (React has no
+#     route for them), served by section 3.
+#   * /static/, /data/, /images/, /brochures/ - created by the previous site
+#     and still read by those legacy pages and by the product TDS links.
+#
+# Requires Apache mod_rewrite. If mod_rewrite is unavailable, the SPA fallback
+# equivalent is:  FallbackResource /index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # ------------------------------------------------------------------
+  # 1. Never rewrite the entry point itself.
+  # ------------------------------------------------------------------
+  RewriteRule ^index\.html$ - [L]
+
+  # ------------------------------------------------------------------
+  # 2. Retire the old flat .html URLs. Each one now has a React route, so
+  #    these are permanent redirects instead of duplicate pages.
+  # ------------------------------------------------------------------
+  RewriteRule ^about\.html$ /about [R=301,L]
+  RewriteRule ^products\.html$ /products [R=301,L]
+  RewriteRule ^contact\.html$ /contact [R=301,L]
+  RewriteRule ^blog\.html$ /blog [R=301,L]
+  RewriteRule ^manufacturers-in-india\.html$ /manufacturers-in-india [R=301,L]
+
+  # /blog/<slug>.html -> the canonical /blog/<slug>. THE_REQUEST pins this to
+  # the original browser request so the internal rewrite in section 3 cannot
+  # bounce back through it.
+  RewriteCond %{THE_REQUEST} \s/+blog/[^/?\s]+\.html[\s?]
+  RewriteRule ^(blog/[^/]+)\.html$ /$1 [R=301,L]
+
+  # A direct /news.html request belongs on the canonical /news URL. Same guard.
+  RewriteCond %{THE_REQUEST} \s/+news\.html[\s?]
+  RewriteRule ^news\.html$ /news [R=301,L]
+
+  # Collapse the trailing-slash forms so the file lookups in section 3 match.
+  RewriteRule ^(blog/[^/]+)/+$ /$1 [R=301,L]
+  RewriteRule ^news/+$ /news [R=301,L]
+
+  # ------------------------------------------------------------------
+  # 2b. Retired product and industry URLs. Each logical page now has exactly
+  #     one canonical URL, so these are permanent redirects rather than
+  #     duplicate pages. Kept in step with LEGACY_REDIRECTS in
+  #     src/config/routes.js.
+  #
+  #     Anchored with /?$ so a canonical path can never re-match a rule, and
+  #     case-sensitive so the exact %{REQUEST_URI} spellings below (including
+  #     /industries/sugerRefinery) are the only forms redirected.
+  # ------------------------------------------------------------------
+  RewriteRule ^products/cation/?$         /products/cationexchangeresins      [R=301,L]
+  RewriteRule ^products/anion/?$          /products/anionexchangeresins       [R=301,L]
+  RewriteRule ^products/mixedbed/?$       /products/mixedbedexchangeresin     [R=301,L]
+  RewriteRule ^products/watersoftener/?$  /products/watersoftenerresins       [R=301,L]
+  RewriteRule ^products/specialty/?$      /products/specialtyresins           [R=301,L]
+
+  # Earlier published spellings of the same product pages.
+  RewriteRule ^products/cation-exchange-resins/?$  /products/cationexchangeresins  [R=301,L]
+  RewriteRule ^products/cationanion/?$             /products/cationexchangeresins  [R=301,L]
+  RewriteRule ^products/anion-exchange-resins/?$   /products/anionexchangeresins   [R=301,L]
+  RewriteRule ^products/mixed-bed-resins/?$        /products/mixedbedexchangeresin [R=301,L]
+  RewriteRule ^products/water-softener-resins/?$   /products/watersoftenerresins   [R=301,L]
+  RewriteRule ^products/specialty-resins/?$        /products/specialtyresins       [R=301,L]
+
+  RewriteRule ^industries/chemical/?$                /industries/chemicalindustries        [R=301,L]
+  RewriteRule ^industries/chemical-intermediates/?$  /industries/chemicalindustries        [R=301,L]
+  RewriteRule ^industries/food-beverage/?$           /industries/food-beverage-industries  [R=301,L]
+  RewriteRule ^industries/paper/?$                   /industries/paper-pulp-industries     [R=301,L]
+  RewriteRule ^industries/paper-pulp/?$              /industries/paper-pulp-industries     [R=301,L]
+  RewriteRule ^industries/power-thermal/?$           /industries/power-thermal-industries  [R=301,L]
+  RewriteRule ^industries/power-thermal-plants/?$    /industries/power-thermal-industries  [R=301,L]
+  RewriteRule ^industries/sugerRefinery/?$           /industries/suger-refinery-industries [R=301,L]
+  RewriteRule ^industries/sugar-processing/?$        /industries/suger-refinery-industries [R=301,L]
+  RewriteRule ^industries/sugar-seo-kit/?$           /industries/suger-refinery-industries [R=301,L]
+  RewriteRule ^industries/textile/?$                 /industries/textile-industries        [R=301,L]
+  RewriteRule ^industries/textie/?$                  /industries/textile-industries        [R=301,L]
+  RewriteRule ^industries/textile-dye/?$             /industries/textile-industries        [R=301,L]
+
+  # ------------------------------------------------------------------
+  # 3. Responses React does not implement, served from the static HTML files
+  #    the previous site already published at those URLs. Appending .html to
+  #    an already-rewritten URI cannot match a second time, so no loop.
+  # ------------------------------------------------------------------
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^(blog/[^/]+)$ $1.html [L]
+
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^news$ news.html [L]
+
+  # The preserved /blog directory must not swallow the application's /blog route.
+  RewriteRule ^blog/?$ /index.html [L]
+
+  # ------------------------------------------------------------------
+  # 4. Real files and directories are served as they are - robots.txt,
+  #    sitemap.xml, the favicons, og-image.jpg, the Google verification file,
+  #    /brochures/, /images/, /data/ and the preserved legacy pages.
+  # ------------------------------------------------------------------
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # ------------------------------------------------------------------
+  # 5. Everything else is an application route.
+  # ------------------------------------------------------------------
+  RewriteRule . /index.html [L]
+</IfModule>
